@@ -53,3 +53,9 @@ AI-DEV-EDU-LANDING 프로젝트는 AI 개발 교육을 위한 랜딩 페이지�
 5. http://mybranding.dothome.co.kr/ 접속 시 CSS, 이미지, 메뉴, 모든 페이지가 정상 동작하는지 확인
 6. 위 변경사항을 git add . → git commit -m "fix: dothome 배포용 basePath/assetPrefix 수정 및 정적 빌드" → git push로 GitHub에 반영
 
+### 닷홈 배포 주의사항 및 FileZilla 업로드 팁
+- out 폴더 자체를 업로드하는 것이 아니라, out 폴더 안의 내용물 전체를 업로드해야 함.
+- 숨김 파일(.nojekyll)도 반드시 업로드.
+- FileZilla에서 "서버 → 숨김 파일 표시"를 체크하면 숨김 파일이 보임.
+- 업로드 완료 후 http://mybranding.dothome.co.kr/ 접속 → 바로 랜딩 페이지가 보여야 정상.
+
