@@ -11,8 +11,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? '/AI-DEV-EDU-LANDING' : '',
-  assetPrefix: isProd ? '/AI-DEV-EDU-LANDING/' : '',
+  basePath: '',
+  assetPrefix: '',
+  output: 'export',
 }
 
 export default nextConfig

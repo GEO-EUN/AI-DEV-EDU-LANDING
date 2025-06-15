@@ -1,9 +1,9 @@
-
 ## 🛠️ 개발노트
 
 
 1. **ChatGPT로 기본 PRD 구성**
    - ChatGPT를 활용해 프로젝트의 PRD(제품 요구사항 명세서) 초안 작성
+   - sora.chatgpt.com 에서 프로필 gif 파일 생성
 
 2. **https://v0.dev 에서 ChatGPT로 만든 PRD로 기본 프로젝트 기능 구성 후 프로젝트 다운로드**
    - v0.dev에서 PRD 기반으로 웹 프로젝트 자동 생성
@@ -46,4 +46,25 @@
 - 주요 컴포넌트 설계 및 구현
 - 초기 라우팅 및 페이지 구성
 
-</rewritten_file> 
+npm install --save-dev gh-pages 
+
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "export": "next export",
+  "deploy": "gh-pages -d out"
+} 
+
+npm run build
+npm run export
+npm run deploy 
+
+const isProd = process.env.NODE_ENV === 'production';
+
+const nextConfig = {
+  // ...기존 설정
+  basePath: '',
+  assetPrefix: '',
+  output: 'export',
+}
+export default nextConfig 
