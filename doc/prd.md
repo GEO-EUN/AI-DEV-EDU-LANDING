@@ -39,3 +39,17 @@ AI-DEV-EDU-LANDING 프로젝트는 AI 개발 교육을 위한 랜딩 페이지�
 - **개발 도구:** Git, Visual Studio Code, Cursor AI
 - **인터랙티비티:** Vanilla JavaScript (ES6+, public/js), Next.js 내장 기능
 
+## 최신 배포 과정 (닷홈 호스팅)
+
+1. next.config.mjs에서 basePath, assetPrefix를 ''(빈 문자열)로 수정
+   ```js
+   basePath: '',
+   assetPrefix: '',
+   output: 'export',
+   ```
+2. npm run build로 out 폴더에 정적 파일 생성
+3. out 폴더에 .nojekyll 파일 생성
+4. out 폴더의 모든 파일/폴더(.nojekyll 포함)를 FileZilla 등으로 닷홈 /html 폴더에 업로드(덮어쓰기)
+5. http://mybranding.dothome.co.kr/ 접속 시 CSS, 이미지, 메뉴, 모든 페이지가 정상 동작하는지 확인
+6. 위 변경사항을 git add . → git commit -m "fix: dothome 배포용 basePath/assetPrefix 수정 및 정적 빌드" → git push로 GitHub에 반영
+
